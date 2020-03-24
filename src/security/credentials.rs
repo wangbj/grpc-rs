@@ -238,14 +238,14 @@ impl ChannelCredentialsBuilder {
         };
         let creds = unsafe {
             if cert_ptr.is_null() {
-                grpcio_sys::grpc_ssl_credentials_create_ex(
+                grpcio_sys::grpc_ssl_credentials_create(
                     root_ptr,
                     ptr::null_mut(),
                     ptr::null_mut(),
                     ptr::null_mut(),
                 )
             } else {
-                grpcio_sys::grpc_ssl_credentials_create_ex(
+                grpcio_sys::grpc_ssl_credentials_create(
                     root_ptr,
                     &mut pair,
                     ptr::null_mut(),
