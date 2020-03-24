@@ -5,7 +5,7 @@
 #![allow(non_upper_case_globals)]
 #[allow(clippy::all)]
 mod bindings {
-    include!(env!("BINDING_PATH"));
+    include!("../bindings/x86_64-unknown-linux-gnu-bindings.rs");
 }
 mod grpc_wrap;
 
